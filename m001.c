@@ -1,18 +1,12 @@
 /* m001.c - Greatest of two.
-
    This program takes three integers read as command 
    line arguments and outputs the greatest among them.
-
    E.g.
-
       command line    : m001 5 20 7
       expected output : 20
-
    Directions:
-
       Please, edit function greatest();
       do no not change function main().
-
  */
 
 #include <stdio.h>
@@ -24,7 +18,22 @@
 
 int greatest (int a, int b, int c)
 {
+
+  if (a>b && a>c)
+  {
   return a;
+  }
+  else
+  {
+      if (b>a && b>c)
+      {
+          return b;
+      }
+      else
+      {
+          return c;
+      }
+  }
 }
 
 /* Do not edit this function. */
