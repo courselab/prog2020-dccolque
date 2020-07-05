@@ -1,3 +1,17 @@
+/* m010.c - Day of the week.
+   This program takes two integers read as command line arguments
+   representing, respectively, the day and the month of a date in
+   year 2020, and produces as output the corresponding day of the week.
+   Output should be: Sunday, Monday, Thursday, Wednesday, Thursday,
+   Friday, Saturday.
+   E.g.
+      command line    : m010 2 6
+      expected output : Thursdays
+   Directions:
+      Please, edit function day_of_week();
+      do no not change function main().
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 

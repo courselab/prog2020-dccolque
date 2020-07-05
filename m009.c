@@ -1,19 +1,13 @@
-/* m009.c - Sort vector.
-
+ /* m009.c - Sort vector.
    This program reads N<=100 numbers passed as command line
    arguments and ouputs them in ascending order. Choose the
    sorting algorithm of your preference (see bellow).
-
    E.g.
-
       command line    : m009 3 2 5 4 2
       expected output : 2 2 3 4 5
-
    Directions:
-
       Please, edit function sort();
       do no not edit function main().
-
 */
 
 #include <stdio.h>
@@ -24,8 +18,26 @@
 /* Sort the first 'n' integers values in 'vector'. */
 
 void sort (int* vector, int n)
+
 {
+int i,j,a;
+i = 1;
+
+while (i < n)
+{
+  a = vector[i];
+  j = i - 1;
+   while ((j >= 0) && (vector[j] > a))
+    {
+      vector[j+1] = vector[j];
+      j = j - 1;
+    }
+    vector[j+1] = a;
+    i = i + 1;
+    }
 }
+
+
 
 #define USAGE "m009 <num1> <nun2> ... \n"
 
@@ -58,7 +70,6 @@ int main (int argc, char **argv)
 }
 
 /* Tip: check these sorting methods
-
    Selection sort: https://en.wikipedia.org/wiki/Selection_sort
    Bubble sort: https://en.wikipedia.org/wiki/Bubble_sort
    Insertion sort: https://en.wikipedia.org/wiki/Insertion_sort
