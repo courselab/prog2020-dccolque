@@ -1,20 +1,13 @@
 /* m004.c - Binary to decimal.
-
    This program takes a string read as a command line argument and,
    interpreting it as a positive binary integer, outputs its 
    corresponding value in decimal base.
-
-
    E.g.
-
       command line    : m004 0011 
       expected output : 3
-
    Directions:
-
       Please, edit function decimal();
       do no not change function main().
-
 */
 
 #include <stdio.h>
@@ -29,8 +22,14 @@
 
 int decimal (char *b)
 {
-  
-  return 0;
+  int n, r = 0, i, p = 1;
+  n = strlen (b);
+  for (i = n - 1; i >= 0; i--)
+  {
+    r = r + p * (b[i] - 48);
+    p = p * 2;
+  }
+  return r;
 }
 
 #define USAGE "m004 <string>\n"
